@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aquamarine;
+        }
+        .container .item {
+            background-color: rgb(199, 255, 255);
+        }
+        .main-container .item{
+            background-color: aqua;
+        }
+        .button {
+            background-color: rgb(161, 252, 255);
+            border: 0;
+            padding: 10px;
+        }
+        .button.active {
+            background-color: rgb(120, 253, 209);
+            border: 0;
+            padding: 10px;
+        }
+        .button.danger {
+            background-color: rgb(172, 255, 227);
+        }
+        .item1, .item2 {
+            background-color: rgb(203, 241, 241);
+        }
+        input[type="text"] {
+            border: 2px solid rgb(0, 226, 151);
+        }
+
+    </style>
+</head>
+<div>
+    <!-- 1.Item เป็นลูกค้าของ Container -->
+    <div class="container">
+        Container
+        <div class="item">
+            Item 1
+        </div>
+    </div>
+
+    <!-- 2.Item เป็นลูกต้าของ Container แค่ชั้นเดียว -->
+    <div class="main-container">
+        Container
+        <div class="item">
+            Item
+        </div>
+            <div class="item">
+                Item 1
+            </div>
+            <div class="item"> 
+                Item2
+            </div>
+            <div class="item">
+                Item3
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. มี class ติดกัน -->
+     <button class="button">Click me</button>
+     <button class="button active">Click me</button>
+     <button class="button danger">Click me</button>
+
+    <!-- 4. ใกล้กัน -->
+     <div class="item1">Item1</div>
+     <div class="item2">Item2</div>
+
+    <!-- 5.attribute selector -->
+     <input type="text" name="firstname">
+     
+</body>
+</html>
