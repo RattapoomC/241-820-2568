@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Register Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    ชื่อ :
+    <input type="text" name="firstname">
+    <br><br>
+
+    นามสกุล :
+    <input type="text" name="lastname">
+    <br><br>
+
+    อายุ :
+    <input type="number" name="age" min="0" max="100">
+    <br><br>
+
+    เพศ :
+    <input type="radio" name="gender" value="ชาย"> ชาย
+    <input type="radio" name="gender" value="หญิง"> หญิง
+    <input type="radio" name="gender" value="อื่นๆ"> อื่นๆ
+    <br><br>
+
+    งานอดิเรก :
+    <input type="checkbox" name="interest" value="อ่านหนังสือ"> อ่านหนังสือ
+    <input type="checkbox" name="interest" value="ดูหนัง" checked> ดูหนัง
+    <input type="checkbox" name="interest" value="ฟังเพลง"> ฟังเพลง
+    <pre></pre>
+
+    คำอธิบาย :
+    <br>
+    <textarea name="description"></textarea>
+    <br><br>
+
+    <button onclick="submitData()">ส่งข้อมูล</button>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
