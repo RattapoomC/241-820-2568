@@ -1,0 +1,71 @@
+# ===== ดู Container =====
+
+docker ps
+# ดู container ที่กำลังทำงาน
+
+docker ps --all
+# ดู container ทั้งหมด (รวมที่ stop ไปแล้ว)
+
+
+
+# ===== สร้าง / รัน Container =====
+
+docker run nginx
+# รัน nginx container แบบง่าย
+
+docker run -p 80:80 nginx
+# map port จากเครื่องเรา → container
+# localhost:80 → nginx:80
+
+
+docker run busybox ping google.com
+# test network ว่า container ต่อ internet ได้ไหม
+
+
+docker create busybox ping google.com
+# create container เฉยๆ (ยังไม่ run)
+# status จะเป็น CREATED
+
+
+
+# ===== Start / Stop Container =====
+
+docker start CONTAINER_ID
+# เริ่ม container ที่เคย create ไว้
+
+docker stop CONTAINER_ID
+# หยุด container ที่กำลังทำงาน
+
+
+
+# ===== เข้าไปดูใน Container =====
+
+docker exec CONTAINER_ID ls
+# ดูไฟล์ใน container
+
+docker exec -it CONTAINER_ID sh
+# เข้า shell ของ container
+
+docker exec -it CONTAINER_ID bash
+# เข้า bash shell (ถ้ามี)
+
+
+
+# ===== ลบ Container =====
+
+docker rm CONTAINER_ID
+# ลบ container
+
+docker system prune
+# ลบ container / network / image ที่ไม่ได้ใช้
+# ระวังใช้ในระบบจริง
+
+
+
+# ===== ลบหลาย Container =====
+
+docker stop $(docker ps -aq)
+# หยุด container ทั้งหมด
+
+docker rm $(docker ps -aq)
+# ลบ container ทั้งหมด
